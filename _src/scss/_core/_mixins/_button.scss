@@ -1,0 +1,47 @@
+@mixin btn($btn-bg, $btn-border, $btn-color) {
+	@extend .btn-static;
+	background: $btn-bg;
+	border-color: $btn-border;
+	color: $btn-color;
+
+	&:visited, &:active, &:focus {
+		background: $btn-bg;
+		border-color: $btn-border;
+		color: $btn-color;
+	}
+}
+
+@mixin btn-static{
+	//border-width: $btn-border-width;
+	//border-style: $btn-border-style;
+	//border-radius: $btn-border-radius;
+	border-style: solid;
+	// min-width: 20rem;
+	//font-family: $btn-font;
+	font-size: $btn-font-size;
+	font-weight: $btn-font-weight;
+	text-decoration: $btn-text-decoration;
+	text-transform: $btn-text-transform;
+	line-height: $btn-line-height;
+	text-align: center;
+	padding: $btn-padding;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	transition: all 0.2s ease-in-out;
+
+	&.small {
+		font-size: $btn-sm-font-size;
+		padding: $btn-sm-padding;
+	}
+	&.large {
+		font-size: $btn-lg-font-size;
+		padding: $btn-lg-padding;
+	}
+}
+
+.btn-static{ @include btn-static; }
+
+// .btn.btn-primary,.btn.btn-secondary,.btn-static,.block-editor .wp-block-button .wp-block-button__link,.site-container .wp-block-button .wp-block-button__link,.block-editor .wp-block-button.is-style-outline .wp-block-button__link,.site-container .wp-block-button.is-style-outline .wp-block-button__link{ @include btn-static; }
+// .site-container .wp-block-button.small .wp-block-button__link,.site-container .wp-block-button.is-tyle-outline.small .wp-block-button__link { font-size: $btn-sm-font_size; padding: $btn-sm-padding; }
+// .site-container .wp-block-button.large .wp-block-button__link,.site-container .wp-block-button.is-tyle-outline.large .wp-block-button__link { font-size: $btn-lg-font_size; padding: $btn-lg-padding; }

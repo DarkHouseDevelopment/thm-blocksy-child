@@ -1,0 +1,32 @@
+// outputs all heading declarations. #
+@function headings($from:1, $to:6) {
+	@if $from == $to {
+		@return 'h#{$from}';
+	} @else {
+		@return 'h#{$from},' + headings($from+1, $to);
+	}
+}
+
+// Calcluates the CSS letter spacing based on Photoshop letter spacing value.
+@mixin letter-spacing($s){
+	$calc: unquote( ( $s / 1000 ) + 'em' );
+	letter-spacing: #{$calc};
+}
+
+// make element cover section
+@mixin cover_section( $zindex: 0, $position: absolute, $placement: 0 null null 0, $width: 100%, $height: 100% ) {
+	@include position( $position, $placement );
+	@include size( $width, $height );
+	z-index: $zindex;
+}
+
+// cover image
+@mixin image_cover_section( $zindex: 0, $position: absolute, $placement: 0 null null 0, $width: 100%, $height: 100% ) {
+	@include cover_section( $zindex, $position, $placement, $width, $height );
+	object-fit: cover;
+}
+
+@mixin skew_bg( $zindex: 0, $position: absolute, $placement: 0 null null 0, $width: 112%, $height: 100%, $angle: -8deg ) {
+	@include cover_section( $zindex, $position, $placement, $width, $height );
+	transform: skew( $angle );
+}

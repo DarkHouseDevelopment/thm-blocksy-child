@@ -1,0 +1,94 @@
+//------------------------------------------------------------------------
+// VARIABLES
+//------------------------------------------------------------------------
+
+$black: rgb(20,20,20);
+$darkgrey: rgb(50,50,50);  // #323232
+$grey: rgb(84,84,84);  // #545454
+$lightgrey: rgb(207,207,207);  // #cfcfcf
+$lightergrey: rgb(242,247,249);  // #f2f7f9
+$white: rgb(255,255,255);
+
+// Site Colors
+
+$primary_color: rgb(240,103,133); // #f06785
+$primary_color_light: rgb(255,240,241); // #fff0f1
+$primary_color_dark: rgb(224,68,102); // #e04466
+$secondary_color: rgb(25,179,196); // #19b3c4
+$secondary_color_light: rgb(212,242,245); // #d4f2f5
+
+$msggreen: rgb(72,211,151); // Used for Success Messages
+$msgorange: rgb(220,140,25); // Used for Alert Messages
+$msgyellow: rgb(248,197,0); // Used for Alert Messages
+$msgred: rgb(255,42,59); // Used for Error Messages
+$bgcolor: $white;
+$bgcolorbright: $lightergrey;
+$fgcolor: $black;
+
+// Typography
+
+$text_color: $darkgrey;
+$base_font: "Mulish", sans-serif;
+$base_font_size: 1.7rem;
+$base_font_weight: 400;
+$base_line_height: 1.6;
+
+$heading_font: "Montserrat", sans-serif;
+$heading_color: $black;
+
+
+// Links
+
+$link_color: $secondary_color;
+$link_font_weight: 400;
+$link_hover: shade($secondary_color,30%);
+
+// Elements
+
+$placeholder_color: $lightgrey;
+$input_border: 1px solid $lightgrey;
+$input_border_radius: 0.4rem;
+$input_padding: 1.5rem;
+$input_margin: 0;
+$input_focus_glow: 0;
+
+$all-text-inputs: "input[type='color'],input[type='date'],input[type='datetime'],input[type='datetime-local'],input[type='email'],input[type='month'],input[type='number'],input[type='password'],input[type='search'],input[type='tel'],input[type='text'],input[type='time'],input[type='url'],input[type='week'],input:not([type]),textarea";
+
+
+// Buttons
+
+$btn_border_width: 2px;
+$btn_border_style: solid;
+$btn_font: $heading_font;
+$btn_font_size: 1.3rem;
+$btn_font_weight: 700;
+$btn_line_height: 1;
+$btn_letter_spacing: 0.2rem;
+$btn_text_transform: uppercase;
+$btn_padding: 1.4rem 3.5rem;
+$btn_border_radius: 2.4rem;
+$btn_sm_font_size: 1.2rem !important;
+$btn_sm_line_height: 1.2;
+$btn_sm_padding: 1.2rem 3rem;
+
+
+
+//------------------------------------------------------------------------
+// GRID VARIABLES
+//------------------------------------------------------------------------
+
+// Column & Container & Thingzzz
+$wrap: 1140;
+$columns: 12;
+
+$container: $wrap + 30;
+$c: $container + 'px';
+
+// Breakpoints
+$sm: 320px;
+$md: 600px;
+$md_lg: 768px;
+$lg: 900px;
+$lg_xl: 1024px;
+$xl: $c;
+$xxl: 1500px;
