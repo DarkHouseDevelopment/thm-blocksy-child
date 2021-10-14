@@ -1,0 +1,78 @@
+// Default Colors
+$black: rgb(35,31,32); // #231F20
+$darkgrey: rgb(61,61,61); // #3D3D3D
+$grey: rgb(149,149,149); // #959595
+$lightgrey: rgb(252,252,255); // #FCFCFF
+$white: rgb(255,255,255); // #fff
+
+// theme colors 
+$purple: rgb(75,54,145); // #4B3691
+$medium_purple: rgb(105,87,164); // #6957A4
+$light_purple: rgb(144,139,195); // #908BC3
+
+$linkblue: rgb(42,93,176); // #2A5DB0 - Used for default Link color
+$msggreen: rgb(84,208,122); // #54D07A - Used for Success Messages
+$msgorange: rgb(239,165,0); // #EFA500 - Used for Alert Messages
+$msgred: rgb(226,25,54); // #E21936 - Used for Error Messages
+
+// defaults
+$bg-color: $white;
+$base-margin: 1.2em;
+$base-padding: 1rem;
+
+// Typography
+$text-color: $darkgrey;
+$text-color-bg-color: $white;
+
+$base-font: futura-pt, sans-serif;
+$base-font-size: 1.8rem;
+$base-font-weight: 400;
+$base-line-height: 1.2;
+
+$heading-font: brandon-grotesque, sans-serif;
+$heading-color: $black;
+
+// Links
+$link-color: $purple;
+$link-font-weight: 400;
+$link-hover: $medium_purple;
+
+// Elements
+$placeholder_color: lighten($grey, 10%);
+$input-border: 1px solid darken($lightgrey, 5%);
+$input-border-radius: 0;
+$input-padding: 1.5rem 1.5rem;
+$input-margin: 0 0 1.5rem;
+$input-focus-glow: 0 0 0.5rem rgba($link-color,0.5);
+
+// Buttons
+$btn-border-width: 0.2rem;
+$btn-border_style: solid;
+$btn-font: $heading-font;
+$btn-font_size: 2rem;
+$btn-sm-font_size: 2rem;
+$btn-lg-font_size: 2rem;
+$btn-font-weight: 900;
+$btn-text-decoration: none;
+$btn-text-transform: uppercase;
+$btn-line-height: 1;
+$btn-padding: 2rem 6rem;
+$btn-sm-padding: 1.5rem 2.6rem;
+$btn-lg-padding: 2.5rem 6rem;
+$btn-border-radius: 0;
+
+// Column & Container & Thingzzz
+$wrap: 1140;
+
+$container: $wrap + 30;
+$c: $container + 'px';
+
+// Breakpoints
+$sm: 320px;
+$md: 600px;
+$md-lg: 768px;
+$columns: 782px;
+$lg: 900px;
+$lg-xl: 1024px;
+$xl: $c;
+$xxl: 1500px;

@@ -1,0 +1,84 @@
+/************************************************************************/
+/* FOOTER STYLES
+/************************************************************************/
+
+.menu-footer-container {
+	width: 100%;
+
+	ul#menu-footer {
+		list-style-type: none;
+		margin: 0 auto;
+		padding: 0;
+		width: 100%;
+		max-width: 29.5rem;
+
+		@include breakpoint($md-lg) {
+			max-width: none;
+			display: grid;
+			grid-template: auto / repeat(5, 1fr);
+			grid-gap: 2rem;
+		}
+
+		li {
+			font-size: 1.5rem;
+			text-align: left;
+			margin: 1rem 0;
+		}
+
+		> li {
+			border-bottom: 1px solid $lightgrey;
+			line-height: 1.2;
+			width: 100%;
+			margin: 0;
+			padding: 1.5rem 0;
+			position: relative;
+
+			@include breakpoint($md-lg){
+				border: 0;
+				padding: 0 1.5rem;
+			}
+
+			&:first-of-type { padding-left: 0; }
+			&:last-of-type { padding-right: 0; }
+
+			i.fa {
+				display: block;
+				font-size: 1.6rem;
+				color: $darkgrey;
+				position: absolute;
+				top: 1.8rem;
+				right: 1rem;
+
+				@include breakpoint($md-lg){ display: none; }
+			}
+
+			> a {
+				font-weight: 700;
+				text-decoration: none;
+				cursor: default;
+
+				@include breakpoint($md-lg){
+					display: inline-block;
+					margin-bottom: 0.5rem;
+				}
+			}
+
+			a {
+				color: $darkgrey;
+				line-height: 1.47;
+			}
+
+			.sub-menu {
+				display: none;
+				list-style-type: none;
+				margin-bottom: 3rem;
+				margin: 0;
+				padding: 0;
+
+				@include breakpoint($md-lg) { display: block !important; }
+
+				a { font-weight: 400; }
+			}
+		}
+	}
+}

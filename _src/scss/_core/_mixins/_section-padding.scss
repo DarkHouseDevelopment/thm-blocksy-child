@@ -1,0 +1,26 @@
+@mixin section_padding( $sm_pad: '', $md_pad: '', $lg_pad: '' ) {
+
+	$sm_base: 5rem 0;
+	$md_base: 8rem 0;
+	$lg_base: 10rem 0;
+
+	@if $sm_pad != '' {
+		padding: $sm_pad;
+	} @else {
+		padding: $sm_base;
+	}
+	@include breakpoint($md){
+		@if $md_pad != '' {
+			padding: $md_pad;
+		} @else {
+			padding: $md_base;
+		}
+	}
+	@include breakpoint($lg){
+		@if $lg_pad != '' {
+			padding: $lg_pad;
+		} @else {
+			padding: $lg_base;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+.evt-grid {
+	$base-grid-gap: 1rem * 4;
+
+	&__row {
+		display: grid;
+		grid-template-columns: auto;
+		grid-gap: $base-grid-gap;
+
+		&--col-2 {
+			@include breakpoint($md) { grid-template-columns: repeat(2, 1fr); }
+			&--is-constant { grid-template-columns: repeat(2, 1fr); }
+		}
+		&--col-3 {
+			@include breakpoint($md) { grid-template-columns: repeat(2, 1fr); }
+			@include breakpoint($md-lg) { grid-template-columns: repeat(3, 1fr); }
+			&--is-constant { grid-template-columns: repeat(3, 1fr); }
+		}
+		&--col-4 {
+			@include breakpoint($md) { grid-template-columns: repeat(2, 1fr); }
+			@include breakpoint($lg) { grid-template-columns: repeat(4, 1fr); }
+			&--is-constant { grid-template-columns: repeat(4, 1fr); }
+		}
+		&--col-5 {
+			@include breakpoint($md) { grid-template-columns: repeat(2, 1fr); }
+			@include breakpoint($md-lg) { grid-template-columns: repeat(3, 1fr); }
+			@include breakpoint($lg) { grid-template-columns: repeat(5, 1fr); }
+			&--is-constant { grid-template-columns: repeat(5, 1fr); }
+		}
+		&--col-6 {
+			@include breakpoint($md) { grid-template-columns: repeat(2, 1fr); }
+			@include breakpoint($lg) { grid-template-columns: repeat(4, 1fr); }
+			@include breakpoint($lg-xl) { grid-template-columns: repeat(6, 1fr); }
+			&--is-constant { grid-template-columns: repeat(6, 1fr); }
+		}
+
+		&--gap-sm { grid-gap: $base-grid-gap / 2; }
+		&--gap-lg { grid-gap: $base-grid-gap; }
+		&--gap-none { grid-gap: 0; }
+	}
+
+	&__column {
+		position: relative;
+
+		&--span-1 { grid-column: span 1; }
+		&--span-2 { grid-column: span 2; }
+		&--span-3 { grid-column: span 3; }
+		&--span-4 { grid-column: span 4; }
+		&--span-5 { grid-column: span 5; }
+		&--span-6 { grid-column: span 6; }
+
+		&--is-centered {
+			align-self: center;
+			justify-self: center;
+		}
+		&--is-centered-right {
+			align-self: center;
+			justify-self: flex-end;
+		}
+		&--is-centered-left {
+			align-self: center;
+			justify-self: flex-start;
+		}
+	}
+}

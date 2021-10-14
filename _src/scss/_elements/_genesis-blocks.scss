@@ -1,0 +1,151 @@
+/**
+ * Fixes for genesis blocks styles.
+ */
+
+.gb-block-accordion {
+	.gb-accordion-title {
+		cursor: pointer;
+	}
+}
+
+/**
+ * Layout column styles
+ * Loads on front end and back end
+ */
+ 
+.wp-block-genesis-blocks-gb-columns { margin-bottom: $base-margin }
+
+.wp-block-genesis-blocks-gb-layout.alignfull {
+	@media only screen and (max-width: 768px) {
+		padding: 0 15px;
+	}
+}
+
+/* Grid gap classes */
+@for $i from 1 through 10  {
+	.gb-block-layout-column-gap-#{$i} {
+		grid-gap: #{$i}em;
+	}
+}
+
+/* Grid column classes. */
+
+/* Two column grid. */
+
+.gb-layout-columns-2 > .gb-layout-column-wrap {
+	&.gb-is-responsive-column {
+		@media only screen and (max-width: 768px) {
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"col1"
+				"col2";
+		}
+	}
+}
+
+/* Three column grid. */
+
+.gb-layout-columns-3 > .gb-layout-column-wrap {
+	&.gb-is-responsive-column {
+		@media only screen and (max-width: 768px) {
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"col1"
+				"col2"
+				"col3";
+		}
+	}
+}
+
+.gb-3-col-widecenter > .gb-layout-column-wrap {
+	&.gb-is-responsive-column {
+		@media only screen and (max-width: 768px) {
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.gb-3-col-wideleft > .gb-layout-column-wrap {
+	&.gb-is-responsive-column {
+		@media only screen and (max-width: 768px) {
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+		}
+	}
+}
+.gb-3-col-wideright > .gb-layout-column-wrap {
+	&.gb-is-responsive-column {
+		@media only screen and (max-width: 768px) {
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+/* Four column grid. */
+
+.gb-layout-columns-4 > .gb-layout-column-wrap {
+	&.gb-is-responsive-column {
+		@media only screen and (max-width: 900px) {
+			grid-template-rows: auto;
+			-ms-grid-columns: 1fr 1fr;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas:
+				"col1 col2"
+				"col3 col4";
+		}
+		@media only screen and (max-width: 768px) {
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"col1"
+				"col2"
+				"col3"
+				"col4";
+		}
+	}
+}
+
+/* Five column grid. */
+
+.gb-layout-columns-5 > .gb-layout-column-wrap {
+	&.gb-is-responsive-column {
+		@media only screen and (max-width: 900px) {
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"col1"
+				"col2"
+				"col3"
+				"col4"
+				"col5";
+		}
+	}
+}
+
+.gb-layout-columns-6 > .gb-layout-column-wrap {
+	&.gb-is-responsive-column {
+		@media only screen and (max-width: 900px) {
+			-ms-grid-columns: 1fr 1fr;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas:
+				"col1 col2"
+				"col3 col4"
+				"col5 col6";
+		}
+		@media only screen and (max-width: 768px) {
+			-ms-grid-columns: 1fr;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"col1"
+				"col2"
+				"col3"
+				"col4"
+				"col5"
+				"col6";
+		}
+	}
+}
