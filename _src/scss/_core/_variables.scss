@@ -1,68 +1,90 @@
-// Default Colors
-$black: rgb(35,31,32); // #231F20
-$darkgrey: rgb(61,61,61); // #3D3D3D
-$grey: rgb(149,149,149); // #959595
-$lightgrey: rgb(252,252,255); // #FCFCFF
-$white: rgb(255,255,255); // #fff
+//------------------------------------------------------------------------
+// VARIABLES
+//------------------------------------------------------------------------
 
-// theme colors 
-$purple: rgb(75,54,145); // #4B3691
-$medium_purple: rgb(105,87,164); // #6957A4
-$light_purple: rgb(144,139,195); // #908BC3
+$black: rgb(20,20,20);
+$darkgrey: rgb(50,50,50);  // #323232
+$grey: rgb(84,84,84);  // #545454
+$lightgrey: rgb(207,207,207);  // #cfcfcf
+$lightergrey: rgb(242,247,249);  // #f2f7f9
+$white: rgb(255,255,255);
 
-$linkblue: rgb(42,93,176); // #2A5DB0 - Used for default Link color
-$msggreen: rgb(84,208,122); // #54D07A - Used for Success Messages
-$msgorange: rgb(239,165,0); // #EFA500 - Used for Alert Messages
-$msgred: rgb(226,25,54); // #E21936 - Used for Error Messages
+// Site Colors
 
-// defaults
-$bg-color: $white;
+$primary_color: rgb(240,103,133); // #f06785
+$primary_color_light: rgb(255,240,241); // #fff0f1
+$primary_color_dark: rgb(224,68,102); // #e04466
+$secondary_color: rgb(25,179,196); // #19b3c4
+$secondary_color_light: rgb(212,242,245); // #d4f2f5
+
+$msggreen: rgb(72,211,151); // Used for Success Messages
+$msgorange: rgb(220,140,25); // Used for Alert Messages
+$msgyellow: rgb(248,197,0); // Used for Alert Messages
+$msgred: rgb(255,42,59); // Used for Error Messages
+$bgcolor: $white;
+$bgcolorbright: $lightergrey;
+$fgcolor: $black;
 $base-margin: 1.2em;
 $base-padding: 1rem;
 
 // Typography
-$text-color: $darkgrey;
-$text-color-bg-color: $white;
 
-$base-font: futura-pt, sans-serif;
-$base-font-size: 1.8rem;
-$base-font-weight: 400;
-$base-line-height: 1.2;
+$text_color: $darkgrey;
+$base_font: "Mulish", sans-serif;
+$base_font_size: 1.7rem;
+$base_font_weight: 400;
+$base_line_height: 1.6;
 
-$heading-font: brandon-grotesque, sans-serif;
-$heading-color: $black;
+$heading_font: "Montserrat", sans-serif;
+$heading_color: $black;
+
 
 // Links
-$link-color: $purple;
-$link-font-weight: 400;
-$link-hover: $medium_purple;
+
+$link_color: $secondary_color;
+$link_font_weight: 400;
+$link_hover: shade($secondary_color,30%);
 
 // Elements
-$placeholder_color: lighten($grey, 10%);
-$input-border: 1px solid darken($lightgrey, 5%);
-$input-border-radius: 0;
-$input-padding: 1.5rem 1.5rem;
-$input-margin: 0 0 1.5rem;
-$input-focus-glow: 0 0 0.5rem rgba($link-color,0.5);
+
+$placeholder_color: $lightgrey;
+$input_border: 1px solid $lightgrey;
+$input_border_radius: 0.4rem;
+$input_padding: 1.5rem;
+$input_margin: 0;
+$input_focus_glow: 0;
+
+$all-text-inputs: "input[type='color'],input[type='date'],input[type='datetime'],input[type='datetime-local'],input[type='email'],input[type='month'],input[type='number'],input[type='password'],input[type='search'],input[type='tel'],input[type='text'],input[type='time'],input[type='url'],input[type='week'],input:not([type]),textarea";
+
 
 // Buttons
-$btn-border-width: 0.2rem;
-$btn-border_style: solid;
-$btn-font: $heading-font;
-$btn-font_size: 2rem;
-$btn-sm-font_size: 2rem;
-$btn-lg-font_size: 2rem;
-$btn-font-weight: 900;
+
+$btn_border_width: 2px;
+$btn_border_style: solid;
+$btn_font: $heading_font;
+$btn_font_size: 1.3rem;
+$btn_font_weight: 700;
+$btn_line_height: 1;
+$btn_letter_spacing: 0.2rem;
 $btn-text-decoration: none;
-$btn-text-transform: uppercase;
-$btn-line-height: 1;
-$btn-padding: 2rem 6rem;
-$btn-sm-padding: 1.5rem 2.6rem;
+$btn_text_transform: uppercase;
+$btn_padding: 1.4rem 3.5rem;
+$btn_border_radius: 2.4rem;
+$btn_sm_font_size: 1.2rem !important;
+$btn-lg-font_size: 2rem;
+$btn_sm_line_height: 1.2;
+$btn_sm_padding: 1.2rem 3rem;
 $btn-lg-padding: 2.5rem 6rem;
-$btn-border-radius: 0;
+
+
+
+//------------------------------------------------------------------------
+// GRID VARIABLES
+//------------------------------------------------------------------------
 
 // Column & Container & Thingzzz
 $wrap: 1140;
+$columns: 12;
 
 $container: $wrap + 30;
 $c: $container + 'px';

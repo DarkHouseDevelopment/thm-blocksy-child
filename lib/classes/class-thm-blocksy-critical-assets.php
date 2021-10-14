@@ -17,7 +17,7 @@ class THMBlocksyChild_Critical_Assets {
 	 * @param      string    $version    The version of this plugin.
 	 */
 	public function __construct() {
-			
+		
 	}
 	
 	/* Add critical CSS to the <head> of the site.
