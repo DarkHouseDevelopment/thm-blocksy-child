@@ -89,4 +89,18 @@ class THMBlocksyChild_Admin {
 
 	}
 
+	/**
+	 * Activates the Gutenberg Block Editor on Woo Products
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	public function thm_activate_gutenberg_products($can_edit, $post_type){
+		if($post_type == 'product'){
+			$can_edit = true;
+		}
+		
+		return $can_edit;
+	}
+
 }

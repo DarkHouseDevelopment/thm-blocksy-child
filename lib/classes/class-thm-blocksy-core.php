@@ -114,6 +114,7 @@ class THMBlocksyChild {
 		$this->loader->add_action( 'admin_enqueue_scripts', $theme_admin, 'thm_enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $theme_admin, 'thm_enqueue_scripts' );
 		$this->loader->add_action( 'admin_menu', $theme_admin, 'thm_add_reusable_blocks_menu' );
+		$this->loader->add_filter( 'use_block_editor_for_post_type', $thm_admin, 'thm_activate_gutenberg_products', 10, 2);
 
 	}
 
