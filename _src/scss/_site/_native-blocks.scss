@@ -22,6 +22,7 @@ main.content, .site-inner {
 	.wp-block-cover, .wp-block-cover-image {
 		min-height: 25rem;
 		padding: 3rem;
+		margin: 0 !important;
 		@include breakpoint($md-lg) { min-height: 38rem }
 	}
 	
